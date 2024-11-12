@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="clickimagens/logo.png" type="image/x-icon">
+  <title>ClickBio Criar Conta🎅</title>
+  <style>
+    html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #3a3a3a, #313131);
+  animation: gradientAnimation 5s ease infinite, particlesMovement 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% { background: linear-gradient(45deg, #3a3a3a, #303030); }
+  50% { background: linear-gradient(45deg, #474747, #333333); }
+  100% { background: linear-gradient(45deg, #3a3a3a, #353535); }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(211, 211, 211, 0.5);
+  animation: moveParticles 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes moveParticles {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(100px, 100px) scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+.particle:nth-child(odd) {
+  animation-duration: 6s;
+}
+
+.particle:nth-child(even) {
+  animation-duration: 8s;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #1f1f1f;
+  padding: 30px;
+  width: 450px;
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center; /* Centraliza o conteúdo do formulário */
+}
+
+/* Adiciona um pequeno espaçamento entre os inputs e rótulos */
+.flex-column > label {
+  color: #f1f1f1;
+  font-weight: 600;
+}
+
+.inputForm {
+  border: 1.5px solid #333;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+  background-color: #2b2b2b;
+}
+
+.input {
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputForm:focus-within {
+  border: 1.5px solid #2d79f3;
+}
+
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color: #2d79f3;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.p {
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #2d79f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Botão centralizado */
+button {
+  font: inherit;
+  background-color: #f0f0f0;
+  border: 0;
+  color: #242424;
+  border-radius: 0.5em;
+  font-size: 1.35rem;
+  padding: 0.275em 1em;
+  font-weight: 600;
+  text-shadow: 0 0.0625em 0 #fff;
+  box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+    0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+    0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+  transition: 0.15s ease;
+  cursor: pointer;
+  width: 100%; /* Faz o botão ocupar toda a largura */
+  margin-top: 15px; /* Adiciona um pouco de espaço em cima do botão */
+  margin-bottom: 15px;
+}
+
+button:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+    0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+    0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+  </style>
+</head>
+<body>
+    <form class="form">
+        <h2 style="text-align: center; color: #f1f1f1;">Crie Sua Conta</h2>
+        
+        <div class="flex-column">
+          <label>Email </label>
+        </div>
+        <div class="inputForm">
+          <input type="email" class="input" placeholder="Coloque Seu Email:" required />
+        </div>
+
+        <div class="flex-column">
+          <label>Password </label>
+        </div>
+        <div class="inputForm">
+          <input type="password" class="input" placeholder="Coloque Sua Senha:" required />
+        </div>
+
+        <div class="flex-column">
+          <label>Confirm Password </label>
+        </div>
+        <div class="inputForm">
+          <input type="password" class="input" placeholder="Confirme Sua Senha:" required />
+        </div>
+
+        <button>Login</button>
+        <p class="p">Já Possui Uma Conta?<span class="span" onclick="window.location.href='index.html'">Entre Já</span></p>
+    </form>
+    <div class="background"></div>
+    <script>
+        // Função para criar partículas
+        function createParticles() {
+          for (let i = 0; i < 50; i++) {
+            const particle = document.createElement("div");
+            particle.classList.add("particle");
+            const size = Math.random() * 5 + 2;
+            const left = Math.random() * 100 + "%";
+            const top = Math.random() * 100 + "%";
+            const animationDuration = Math.random() * 3 + 2 + "s"; // entre 2s e 5s
+            particle.style.width = size + "px";
+            particle.style.height = size + "px";
+            particle.style.left = left;
+            particle.style.top = top;
+            particle.style.animationDuration = animationDuration;
+            document.body.appendChild(particle);
+          }
+        }
+    
+        // Chama a função para criar as partículas
+        createParticles();
+      </script>
+</body>
+</html>
