@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azzy Dev! 👻</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+    <canvas id="particles"></canvas>
+    
+    <div class="glitch-container">
+        <div class="glitch" data-text="< Dev Bio >">Azzy </div>
+    </div>
+
+    <main class="container">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="terminal-button close"></span>
+                    <span class="terminal-button minimize"></span>
+                    <span class="terminal-button maximize"></span>
+                </div>
+                <div class="terminal-title">azzyorg@gmail.com</div>
+            </div>
+            <div class="terminal-content">
+                <div class="code-animation"></div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <div class="profile">
+                <div class="profile-image-container">
+                    <div class="profile-frame"></div>
+                    <img src="images/perfil.jpg" alt="Perfil" class="profile-image">
+                    <div class="tech-stack-orbit">
+                        <div class="tech-item" data-tech="React"><i class="fab fa-react"></i></div>
+                        <div class="tech-item" data-tech="Node"><i class="fab fa-node-js"></i></div>
+                        <div class="tech-item" data-tech="Python"><i class="fab fa-python"></i></div>
+                        <div class="tech-item" data-tech="Docker"><i class="fab fa-docker"></i></div>
+                    </div>
+                </div>
+                <div class="typing-container">
+                    <h1 class="name typing"></h1>
+                </div>
+                <p class="bio">🍀 Desenvolvedor Full Stack | Contribuidor de Código Aberto</p>
+                
+                <div class="skills-container">
+                    <div class="skill">
+                        <div class="skill-name">Frontend</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Backend</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">DevOps</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="github-stats">
+                <div class="stat-card">
+                    <i class="fas fa-code-branch"></i>
+                    <span class="stat-number" data-count="128">0</span>
+                    <span class="stat-label">Repositórios</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-number" data-count="1500">0</span>
+                    <span class="stat-label">Estrelas</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-code"></i>
+                    <span class="stat-number" data-count="500000">0</span>
+                    <span class="stat-label">Linhas de Código</span>
+                </div>
+            </div>
+
+            <div class="links-container">
+                <a href="#" class="link-card" data-tech="github">
+                    <div class="card-content">
+                        <div class="icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="content">
+                            <h3>GitHub</h3>
+                            <p>Confira meus projetos de código aberto</p>
+                        </div>
+                    </div>
+                    <div class="card-bg"></div>
+                </a>
+
+                <a href="#" class="link-card" data-tech="projects">
+                    <div class="card-content">
+                        <div class="icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Portfólio</h3>
+                            <p>Veja meus últimos projetos</p>
+                        </div>
+                    </div>
+                    <div class="card-bg"></div>
+                </a>
+
+                <a href="#" class="link-card" data-tech="blog">
+                    <div class="card-content">
+                        <div class="icon">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Blog Tech</h3>
+                            <p>Leia meus artigos e tutoriais</p>
+                        </div>
+                    </div>
+                    <div class="card-bg"></div>
+                </a>
+
+                <a href="#" class="link-card" data-tech="youtube">
+                    <div class="card-content">
+                        <div class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="content">
+                            <h3>YouTube</h3>
+                            <p>Tutoriais de código e reviews de tecnologia</p>
+                        </div>
+                    </div>
+                    <div class="card-bg"></div>
+                </a>
+            </div>
+
+            <div class="code-snippet">
+                <div class="snippet-header">
+                    <span class="language">JavaScript</span>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+                <pre><code class="language-javascript">
+const developer = {
+    name: "Seu Nome",
+    skills: ["JavaScript", "React", "Node.js", "Python"],
+    experience: 5,
+    contact: () => {
+        console.log("Vamos construir algo incrível!");
+    }
+};
+                </code></pre>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                    <div class="tooltip">Siga-me no Twitter</div>
+                </a>
+                <a href="#" class="social-icon linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="tooltip">Conecte-se no LinkedIn</div>
+                </a>
+                <a href="#" class="social-icon discord">
+                    <i class="fab fa-discord"></i>
+                    <div class="tooltip">Junte-se ao meu Discord</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
